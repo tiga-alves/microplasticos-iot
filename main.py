@@ -27,7 +27,7 @@ def sensor_simulado():
             print(f"Enviado: Luminosidade={valor}, Status={status}")
         except:
             print("Erro ao enviar dados")
-        time.sleep(3)
+        time.sleep(30)  # Alterado para 30 segundos
 
 # --- Backend Flask ---
 app = Flask(__name__)
@@ -58,14 +58,22 @@ def index():
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <style>
             body { font-family: Arial; padding: 20px; }
-            canvas { max-width: 700px; max-height: 400px; }
+            canvas { max-width: 100%; max-height: 500px; }
+            #tempo-range { margin-top: 20px; }
         </style>
     </head>
     <body>
         <h2>Monitoramento de Luminosidade</h2>
         <canvas id="grafico"></canvas>
+        <div id="tempo-range">
+            <label for="intervalo">Intervalo de tempo (segundos): </label>
+            <input type="range" id="intervalo" min="10" max="120" step="10" value="30" oninput="atualizarIntervalo(this.value)">
+            <span id="intervalo-valor">30</span>s
+        </div>
         <script>
             let chart;
+            let intervalo = 3000;
+
             async function carregarDados() {
                 const response = await fetch('/dados');
                 const dados = await response.json();
@@ -97,6 +105,12 @@ def index():
                         options: {
                             responsive: true,
                             scales: {
+                                x: {
+                                    ticks: {
+                                        autoSkip: true,
+                                        maxTicksLimit: 10
+                                    }
+                                },
                                 y: {
                                     beginAtZero: true
                                 }
@@ -106,8 +120,15 @@ def index():
                 }
             }
 
+            function atualizarIntervalo(valor) {
+                document.getElementById('intervalo-valor').innerText = valor;
+                intervalo = valor * 1000;
+                clearInterval(intervaloAtualizacao);
+                intervaloAtualizacao = setInterval(carregarDados, intervalo);
+            }
+
             carregarDados();
-            setInterval(carregarDados, 3000);
+            let intervaloAtualizacao = setInterval(carregarDados, intervalo);
         </script>
     </body>
     </html>
