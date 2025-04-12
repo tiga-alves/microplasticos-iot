@@ -152,4 +152,23 @@ ODS 3 – Saúde e Bem-Estar
 
 ## 📷 Screenshots
 
-[imagem para ser adicionada]
+### 🔹 Dashboard em tempo real
+
+![image](https://github.com/user-attachments/assets/e8e9d47d-7041-4493-bc32-eff308b63bc4)
+
+
+### 🔹 Execução do Flask e Sensor
+
+![image](https://github.com/user-attachments/assets/6348ae4e-3b5f-4838-9d87-9e0a617c6917)
+
+
+### 🔹 Dados armazenados no MongoDB
+
+![image](https://github.com/user-attachments/assets/d21f3ba9-4354-4c37-9dd7-c1551577ebe0)
+
+
+### 🔹 Estrutura do Projeto
+
+![image](https://github.com/user-attachments/assets/d3197355-9125-4bf2-b073-e3f0ecfe923b)
+
+
