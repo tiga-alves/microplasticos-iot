@@ -37,8 +37,11 @@ Conscientizar sobre a presença de microplásticos na água por meio de um prot�
 ## 📁 Estrutura do Projeto
 
 projeto_microplasticos/ 
+
 main.py # Script principal (sensor, backend, dashboard)                        
+
 database/ # Pasta usada pelo MongoDB para persistência 
+
 README.md # Documentação
 
 
@@ -145,7 +148,7 @@ Projeto desenvolvido para a disciplina de **Robótica e IoT – FIAP (2025)**.
 ## 🧠 ODS Relacionado
 ODS 3 – Saúde e Bem-Estar
 
-Reduzir a exposição a poluentes, como os microplásticos, é um passo importante na promoção de saúde pública.
+> Reduzir a exposição a poluentes, como os microplásticos, é um passo importante na promoção de saúde pública.
 
 ---
 
