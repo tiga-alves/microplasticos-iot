@@ -36,9 +36,10 @@ Conscientizar sobre a presença de microplásticos na água por meio de um prot�
 
 ## 📁 Estrutura do Projeto
 
-projeto_microplasticos/ ├── main.py # Script principal (sensor, backend, dashboard) 
-                        ├── database/ # Pasta usada pelo MongoDB para persistência 
-                        ├── README.md
+projeto_microplasticos/ 
+├── main.py # Script principal (sensor, backend, dashboard)                        
+├── database/ # Pasta usada pelo MongoDB para persistência 
+├── README.md
 
 
 ---
@@ -150,3 +151,4 @@ Reduzir a exposição a poluentes, como os microplásticos, é um passo importan
 
 ## 📷 Screenshots
 
+[imagem para ser adicionada]
